@@ -42,7 +42,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 }
 .leftbox_div1_image {
 	width: 370px;
-	height: 245px;
+	height: 275px;
 	background-image: url('images/left_div1box_image.jpg');
 }
 /* New rules if the window width is smaller than 1300px */
