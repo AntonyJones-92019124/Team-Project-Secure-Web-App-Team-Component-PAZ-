@@ -36,9 +36,9 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	padding: 10px;
 }
 .leftbox_div1_image {
-	width: 337px;
-	height: 150px;
-	background-image: url('images/Free-Food_image.png');
+	width: 370px;
+	height: 220px;
+	background-image: url('images/Lemon.jpg');
 }
 .rightbox_div2_image {
 	width: 370px;
@@ -55,7 +55,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	max-width: 350px;
 	height: 500px;
 	padding: 10px;
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 }
 .rightbox_div2 {
 	margin-left: 20px;
@@ -63,7 +63,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	max-width: 350px;
 	height: 500px;
 	padding: 10px;
-	margin-bottom: 120px;
+	margin-bottom: 140px;
 }
 }
 
@@ -76,7 +76,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	max-width: 300px;
 	height: 500px;
 	padding: 10px;
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 }
 .rightbox_div2 {
 	margin: 0 auto;
@@ -84,7 +84,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	max-width: 300px;
 	height: 500px;
 	padding: 10px;
-	margin-bottom: 120px;
+	margin-bottom: 140px;
 }
 }
 
