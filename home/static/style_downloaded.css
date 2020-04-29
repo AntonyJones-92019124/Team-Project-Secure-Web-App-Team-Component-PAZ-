@@ -1364,7 +1364,7 @@ img.header-image {
 	}
 	#site-title a {
 		color: #80abc8;
-		font-size: 30px;
+		font-size: 20px;
 	}
 	#site-title a:hover {
 		color: #80abc8;
@@ -1387,7 +1387,7 @@ img.header-image {
 	}
 }
 /* New rules if the window width is smaller than 1000px */
-@media screen and (max-width: 720px)
+@media screen and (max-width: 740px)
 {
 	.business-template #masthead {
 		background-color: #f3dca5;
@@ -1397,7 +1397,7 @@ img.header-image {
 	}
 	.header {
 		background-color: #eae4d6;
-		height: 490px;
+		height: 530px;
 		width: 100%;
 		margin-bottom: 45px;
 	}
