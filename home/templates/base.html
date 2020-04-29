@@ -54,6 +54,8 @@
                           Only logged in (Admin members) can access this information:
                           <br/>
                           {% if user.is_staff %}
+                          <a href="{% url 'categories' %}">(Add a Category)</a>&nbsp;
+                          <a href="{% url 'view_categories' %}">(Delete a Category)</a>&nbsp;
                           <a href="{% url 'recipes' %}">(Create a Recipe)</a>&nbsp;
                           <a href="{% url 'view_recipes' %}">(Delete a Recipe)</a>&nbsp;
                           {% else %}

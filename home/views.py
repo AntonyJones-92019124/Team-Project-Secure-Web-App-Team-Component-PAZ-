@@ -65,7 +65,7 @@ def categories(request):
                 pass
     else:
         form = CategoriesForm()
-    return render(request, 'create_category.html',{'form':form})
+    return render(request, 'create_categories.html',{'form':form})
 
 #View categories Function
 def view_categories(request):
