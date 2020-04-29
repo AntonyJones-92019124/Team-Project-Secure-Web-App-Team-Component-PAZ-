@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<!-- home page left div box -->
+<div class="leftbox_div1">
+  <h1>Our Recipes</h1>
+  <li><a href="{% url 'available_recipes' %}">View Our List Of Recipes</a></li>
+  <br/>
+  <p>Welcome to our recipes page. We have a large selection of recipes to choose from please feel free to use
+    the link on the page to view our selection of recipes. We have selected many easy and quick recipes for each
+    of these categories with our users in mind, and hope that all our users will find the recipes quick and Easy
+    to prepare for family and guests.</p>
+    <!-- image -->
+    <div class="leftbox_div1_image"></div>
+      <a href="https://restaurantden.com/free-stock-food-photography-websites/">Free Image sourced from</a>
+</div>
+
+<div class="rightbox_div2">
+  <h1>Purpose Of Site</h1>
+  <p>The purpose of this web app is to give our users a quick and easy method for finding recipies that are new and up to date. We regularly add
+  new categories and recipes to allow our users to have a large variety of recipes to work with.
+  <br/><br/>Please see the navigation link below or the site navigation at the top of the screen
+  to browse food categories with accompanied recipes.</p>
+
+        <!-- image -->
+        <div class="rightbox_div2_image"></div>
+            <a href="https://all-free-download.com/free-photos/food.html">Free Image sourced from</a>
+            <a href="#">
+              <br/><br/>
+       </div>
+
+{% endblock %}
