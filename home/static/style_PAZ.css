@@ -56,6 +56,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	height: 500px;
 	padding: 10px;
 	margin-bottom: 100px;
+	margin-right: 50px;
 }
 .rightbox_div2 {
 	margin-left: 20px;
@@ -64,6 +65,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	height: 500px;
 	padding: 10px;
 	margin-bottom: 140px;
+	margin-right: 50px;
 }
 }
 
@@ -72,19 +74,21 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 {
 .leftbox_div1 {
 	margin: 0 auto;
-	float: none;
+	float: left;
 	max-width: 300px;
 	height: 500px;
 	padding: 10px;
 	margin-bottom: 100px;
+	margin-right: 50px;
 }
 .rightbox_div2 {
 	margin: 0 auto;
-	float: none;
+	float: left;
 	max-width: 300px;
 	height: 500px;
 	padding: 10px;
 	margin-bottom: 140px;
+	margin-right: 50px;
 }
 }
 
