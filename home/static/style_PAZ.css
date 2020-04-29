@@ -97,6 +97,9 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	float: left;
 	font-size: 14px;
 }
+.admin_nav_header a:hover {
+	color: #80abc8;
+}
 /* New rules if the window width is smaller than 1300px */
 @media screen and (max-width: 1000px)
 {
@@ -104,6 +107,9 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 	margin: 0 auto;
 	float: left;
 	font-size: 14px;
+}
+.admin_nav_header a:hover {
+	color: #80abc8;
 }
 }
 /*--------------------------------------------------------------
