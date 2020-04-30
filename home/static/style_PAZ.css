@@ -19,82 +19,24 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 ----------------------------------------------------------------
 */
 
-.leftbox_div1 {
-	margin: 0 auto;
-	margin-right: 150px;
-	margin-bottom: 40px;
-	float: left;
-	max-width: 500px;
-	height: 500px;
-	padding: 10px;
-}
-.rightbox_div2 {
-	margin: 0 auto;
-	float: left;
-	max-width: 500px;
-	height: 500px;
-	padding: 10px;
-}
 .leftbox_div1_image {
 	width: 370px;
 	height: 255px;
 	background-image: url('images/Lemon.jpg');
+	margin-bottom: 20px;
 }
 .rightbox_div2_image {
 	width: 370px;
 	height: 245px;
 	background-image: url('images/Home_DivBox1_Image.jpg');
-}
-/* New rules if the window width is smaller than 1300px */
-@media screen and (max-width: 1370px)
-{
-.leftbox_div1 {
-	margin-left: : 50px;
-	margin-right: 50px;
-	float: left;
-	max-width: 350px;
-	height: 500px;
-	padding: 10px;
-	margin-bottom: 100px;
-	margin-right: 50px;
-}
-.rightbox_div2 {
-	margin-left: 30px;
-	float: left;
-	max-width: 350px;
-	height: 500px;
-	padding: 10px;
-	margin-bottom: 140px;
-}
-}
-
-/* New rules if the window width is smaller than 950px */
-@media screen and (max-width: 750px)
-{
-.leftbox_div1 {
-	margin: 0 auto;
-	float: left;
-	max-width: 300px;
-	height: 500px;
-	padding: 10px;
-	margin-bottom: 140px;
-	margin-right: 10px;
-}
-.rightbox_div2 {
-	margin: 0 auto;
-	float: left;
-	max-width: 300px;
-	height: 500px;
-	padding: 10px;
-	margin-bottom: 140px;
-	margin-right: 10px;
-}
+	margin-bottom: 20px;
 }
 
 /*--------------------------------------------------------------
 >>> 2.0 Admin navigation header
 ----------------------------------------------------------------
 */
+
 .admin_nav_header {
 	margin: 0 auto;
 	float: left;
@@ -103,18 +45,7 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 .admin_nav_header a:hover {
 	color: #80abc8;
 }
-/* New rules if the window width is smaller than 1300px */
-@media screen and (max-width: 1000px)
-{
-.admin_nav_header {
-	margin: 0 auto;
-	float: left;
-	font-size: 14px;
-}
-.admin_nav_header a:hover {
-	color: #80abc8;
-}
-}
+
 /*--------------------------------------------------------------
 >>> 3.0 footer navigation
 ----------------------------------------------------------------

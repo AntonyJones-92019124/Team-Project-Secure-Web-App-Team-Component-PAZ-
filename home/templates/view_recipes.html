@@ -20,8 +20,8 @@
     <title>Recipes List</title>
 </head>
 <body>
-    <table class="table table-dark">
-    <thead>
+    <table class="table table-hover">
+    <thead class="thead-dark">
     <tr>
         <th>Recipes Name</th>
         <th>Recipes Steps To Make</th>
@@ -29,7 +29,7 @@
     </thead>
     {% for recipe in recipes %}
     <tr>
-        <td>{{ recipe.recipe_name }}</td>
+        <td "bg-success">{{ recipe.recipe_name }}</td>
         <td>{{ recipe.recipe_steps }}</td>
         <td>
             <a href="/delete_recipes/{{ recipe.id }}" class="btn btn-danger">Delete</a>

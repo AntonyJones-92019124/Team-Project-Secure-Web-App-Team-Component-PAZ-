@@ -3,20 +3,18 @@
 {% load static %}
 
 <!-- home page left div box -->
-<div class="leftbox_div1">
+
   <h1>Home Page</h1>
   <p>Welcome to Quick And Easy Cooking Recipes! We offer a large selection of quick and easy cooking recipes for our users. Our main users base consists
   of small business users, and family orientated users. However this site is avaliable to all users form large to small business users, and also to your average
   joe who would like to find a quick recipe idea for friends and family memebers.
   <br/>
-    <li><a href="{% url 'available_categories' %}">View Our List Of Categories</a></li>
-    <br/>
-    <!-- image -->
+  <li><a href="{% url 'available_categories' %}">View Our List Of Categories</a></li>
+  <br/>
+  <!-- image -->
     <div class="leftbox_div1_image"></div>
-      <a href="https://restaurantden.com/free-stock-food-photography-websites/">Free Image sourced from</a>
-</div>
-
-<div class="rightbox_div2">
+    <a href="https://restaurantden.com/free-stock-food-photography-websites/">Free Image sourced from</a>
+    
   <h1>Purpose Of Site</h1>
   <p>The purpose of this web app is to give our users a quick and easy method for finding recipies that are new and up to date. We regularly add
   new categories and recipes to allow our users to have a large variety of recipes to work with.
@@ -24,8 +22,7 @@
     </div>
     <a href="https://all-free-download.com/free-photos/food.html">Free Image sourced from</a>
     <a href="#">
-  <br/><br/>
-  <li><a href="{% url 'available_recipes' %}">View Our List Of Recipes</a></li>
-</div>
+      <br/><br/>
+      <li><a href="{% url 'available_recipes' %}">View Our List Of Recipes</a></li>
 
 {% endblock %}

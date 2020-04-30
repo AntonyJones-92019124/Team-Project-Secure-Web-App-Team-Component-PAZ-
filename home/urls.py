@@ -19,4 +19,7 @@ urlpatterns = [
     path('available_recipes/', views.available_recipes, name='available_recipes'),
     #Register urls connected to Register class in views.py
     path('register/', views.Register.as_view(), name='register'),
+    #Project Gallery urls
+    path("project_index", views.project_index, name='project_index'),
+    path("<int:pk>/", views.project_detail, name='project_detail'),
 ]
