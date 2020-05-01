@@ -115,3 +115,20 @@ def delete_recipes(request, id):
     recipes = Recipe.objects.get(id=id)
     recipes.delete()
     return redirect('/view_recipes')
+
+from django.shortcuts import render
+from home.models import Project
+
+def project_index(request):
+    projects = Project.objects.all()
+    context = {
+        'projects': projects
+    }
+    return render(request, 'project_index.html', context)
+
+def project_detail(request, pk):
+     project = Project.objects.get(pk=pk)
+     context = {
+         'project': project
+     }
+     return render(request, 'project_detail.html', context)

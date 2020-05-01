@@ -35,6 +35,11 @@ urlpatterns = [
     path('view_recipes/', views.view_recipes),
     path('available_recipes/', views.available_recipes),
     path('delete_recipes/<int:id>', views.delete_recipes),
+    #Gallery projects
+    path('project_index/', views.project_index),
+    path('project_detail/', views.project_detail),
+    path("project_index", views.project_index, name="project_index"),
+    path("<int:pk>/", views.project_detail, name="project_detail"),
 ]
 
 urlpatterns += [
