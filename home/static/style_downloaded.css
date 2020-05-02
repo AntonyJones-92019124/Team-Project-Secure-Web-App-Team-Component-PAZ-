@@ -1284,14 +1284,14 @@ body.wide {
 }
 #header-logo-image {
 	float: left;
-	padding: 5px 20px 5px 0;
+	padding: 0px 20px 0px 0;
 	max-width: 100%;
 }
 #header-logo-image img {
 	margin-bottom: 0px;
-	max-height: 350px;
-	height: 300px;
-	width: 300px;
+	max-height: 360px;
+	height: 310px;
+	width: 310px;
 }
 #header-text {
 	float: left;

@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +12,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Add additional CSS in static file -->
-  {% load static %}
   <link rel="stylesheet" href="{% static 'css/style_downloaded.css' %}">
+
+  {% block content %}
+
+  <h1>Create Category</h1>
+  <a href="#">Add category form</a>
+  <br/><br/>
 
   <div id ="table">
     <meta charset="UTF-8">
@@ -55,5 +63,6 @@
 
 </form>
 </body>
-
 </html>
+
+{% endblock %}
