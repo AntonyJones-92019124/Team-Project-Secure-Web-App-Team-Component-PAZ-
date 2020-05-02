@@ -1,8 +1,9 @@
+{% extends 'base.html' %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% load static %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -11,14 +12,20 @@
 
 
   <!-- Add additional CSS in static file -->
-  {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  {% block content %}
+
+  <h1>Delete Categories</h1>
+  <a href="#">Categories table</a>
+  <br/><br/>
 
   <div id ="table">
     <meta charset="UTF-8">
     <title>Cateory List</title>
 </head>
+
 <body>
     <table class="table table-hover">
     <thead class="thead-dark">
@@ -36,6 +43,8 @@
         </td>
     </tr>
 {% endfor %}
-
+</table>
 </body>
 </html>
+
+{% endblock %}
