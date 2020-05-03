@@ -45,4 +45,5 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     author = models.CharField(max_length=20)
+    full_description = models.TextField()
     image = models.FilePathField(path="/images")
