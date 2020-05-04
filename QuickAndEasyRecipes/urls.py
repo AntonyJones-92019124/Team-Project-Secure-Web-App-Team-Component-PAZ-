@@ -30,16 +30,17 @@ urlpatterns = [
     path('view_categories/', views.view_categories),
     path('available_categories/', views.available_categories),
     path('delete_categories/<int:id>', views.delete_categories),
-    #Recipes urls connected to recipes function in views.property
-    path('recipes/', views.recipes),
-    path('view_recipes/', views.view_recipes),
-    path('available_recipes/', views.available_recipes),
-    path('delete_recipes/<int:id>', views.delete_recipes),
     #Gallery projects
     path('project_index/', views.project_index),
     path('project_detail/', views.project_detail),
     path("project_index", views.project_index, name="project_index"),
     path("<int:pk>/", views.project_detail, name="project_detail"),
+    #Categories URLs    path('project_index/', views.project_index),
+    path('category_index/', views.category_index),
+    path('category_detail/', views.category_detail),
+    path("category_index", views.category_index, name="category_index"),
+    path("category_detail/<int:id>/", views.category_detail, name="category_detail"),
+
 ]
 
 urlpatterns += [

@@ -11,7 +11,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 
-from .models import Category, Recipe
+from .models import Category, Project
 
 #Add your function here
 
@@ -37,16 +37,6 @@ def our_categories(request):
     return render(
         request,
         'categories.html',
-        context={},
-    )
-
-def our_recipes(request):
-    """View function for recipes page of site."""
-
-    # Render the HTML template recipes.html with the data in the context variable.
-    return render(
-        request,
-        'recipes.html',
         context={},
     )
 
@@ -83,42 +73,11 @@ def delete_categories(request, id):
     categories.delete()
     return redirect('/view_categories')
 
-from .forms import RecipesForm
-from .models import Recipe
-
-#recipes request function for RecipesForm from forms.py
-def recipes(request):
-    if request.method == "POST":
-        form = RecipesForm(request.POST)
-        if form.is_valid():
-            try:
-                form.save()
-                return redirect('/view_recipes')
-            except:
-                pass
-    else:
-        form = RecipesForm()
-    return render(request, 'create_recipes.html',{'form':form})
-
-#View recipes Function
-def view_recipes(request):
-    recipes = Recipe.objects.all()
-    return render(request, 'view_recipes.html',{'recipes':recipes})
-
-#availible recipes function
-def available_recipes(request):
-    recipes= Recipe.objects.all()
-    return render(request, 'available_recipes.html',{'recipes':recipes})
-
-#Delete a recipe Function
-def delete_recipes(request, id):
-    recipes = Recipe.objects.get(id=id)
-    recipes.delete()
-    return redirect('/view_recipes')
-
+#Project functions
 from django.shortcuts import render
 from home.models import Project
 
+#Project functions
 def project_index(request):
     projects = Project.objects.all()
     context = {
@@ -132,3 +91,22 @@ def project_detail(request, pk):
          'project': project
      }
      return render(request, 'project_detail.html', context)
+
+#category functions
+from django.shortcuts import render
+from home.models import Category
+
+#category functions
+def category_index(request):
+    categories = Category.objects.all()
+    context = {
+        'categories': categories
+    }
+    return render(request, 'category_index.html', context)
+
+def category_detail(request, id):
+     category = Category.objects.get(id=id)
+     context = {
+         'category': category
+     }
+     return render(request, 'category_detail.html', context)
