@@ -7,6 +7,9 @@ urlpatterns = [
     #main Pages
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    #Category URLs#Project Gallery urls
+    path("category_index", views.category_index, name='category_index'),
+    path("category_detail/<int:id>/", views.category_detail, name='category_detail'),
     path('categories', views.our_categories, name='our_categories'),
     #categories urls
     path('categories/', views.categories, name='categories'),

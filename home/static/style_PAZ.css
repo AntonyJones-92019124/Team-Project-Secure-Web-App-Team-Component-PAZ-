@@ -20,15 +20,15 @@ Description: See style css layouts for Quick And EAsy Recipes (PAZ)
 */
 
 .leftbox_div1_image {
-	width: 370px;
-	height: 255px;
-	background-image: url('images/Lemon.jpg');
+	width: 700px;
+	height: 375px;
+	background-image: url('images/free_to_use_image2.jpg');
 	margin-bottom: 20px;
 }
 .rightbox_div2_image {
-	width: 370px;
-	height: 245px;
-	background-image: url('images/Home_DivBox1_Image.jpg');
+	width: 700px;
+	height: 375px;
+	background-image: url('images/Cereal_Rasberry.jpg');
 	margin-bottom: 20px;
 }
 
