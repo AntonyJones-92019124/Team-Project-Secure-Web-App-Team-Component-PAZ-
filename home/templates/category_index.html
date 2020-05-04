@@ -20,7 +20,7 @@
     <div class="col-sm-4">
                 <h5 class="card-title">{{ category.category_name }}</h5>
                 <p class="card-text">{{ category.category_description }}</p>
-                <p class="card-text">Author: {{ category.author }}</p>
+                <p class="card-text">Author: <a href="#">{{ category.author }}</a></p>
                 <a href="{% url 'category_detail' category.id %}"
                    class="btn btn-primary">
                     read more

@@ -13,16 +13,17 @@
 
 {% block content %}
 
-<h1>Recipe</h1>
-<a href="#">Recipes</a>
+<h1>Recipe Details</h1>
 <br/><br/>
 <div class="row">
     <div class="col-sm-2">
         <div class="card mb-2" style="width: 54rem;">
             <div class="card-body">
                 <h5 class="card-title">{{ category.category_name }}</h5>
+                <a href="#">Recipe details</a>
+                <br/><br/>
                 <p class="card-text">{{ category.full_description }}</p>
-                <p class="card-text">Author: {{ category.author }}</p>
+                <p class="card-text"><a href="#">Author: {{ category.author }}</a></p>
                 <a href="{% url 'category_detail' category.id %}"
                 </a>
             </div>
