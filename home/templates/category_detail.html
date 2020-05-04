@@ -13,23 +13,22 @@
 
 {% block content %}
 
-<h1>Project Recipes</h1>
-<a href="#">Welcome to our gallery</a>
+<h1>Recipe</h1>
+<a href="#">Recipes</a>
 <br/><br/>
 <div class="row">
     <div class="col-sm-2">
         <div class="card mb-2" style="width: 34rem;">
-            <img class="card-img-top" src="{% static project.image %}">
             <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.full_description }}</p>
-                <a href="{% url 'project_detail' project.pk %}"
+                <h5 class="card-title">{{ category.category_name }}</h5>
+                <p class="card-text">{{ category.full_description }}</p>
+                <p class="card-text">Author: {{ category.author }}</p>
+                <a href="{% url 'category_detail' category.id %}"
                 </a>
             </div>
         </div>
     </div>
 </div>
-<a href="https://restaurantden.com/free-stock-food-photography-websites/">Free image source</a>
 <br/><br/>
 
 {% endblock %}

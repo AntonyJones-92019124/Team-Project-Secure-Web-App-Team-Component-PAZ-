@@ -29,7 +29,7 @@
     </thead>
     {% for category in categories %}
     <tr>
-       <td><a href="{% url 'available_recipes' %}">{{ category.category_name }}</a></td>
+       <td><a href="{% url 'category_detail' category.id %}">{{ category.category_name }}</a></td>
        <td>{{ category.category_description }}</td>
     </tr>
     {% endfor %}

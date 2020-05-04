@@ -10,12 +10,3 @@ class CategoriesForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = "__all__"
-
-from django import forms
-from .models import Recipe
-
-#Recipes Form class.
-class RecipesForm(forms.ModelForm):
-    class Meta:
-        model = Recipe
-        fields = "__all__"
