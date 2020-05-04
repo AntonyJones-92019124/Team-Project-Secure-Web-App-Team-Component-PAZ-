@@ -1,27 +1,40 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends 'base.html' %}
 {% load static %}
 
-<!-- home page left div box -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <h1>Home Page</h1>
-  <p>Welcome to Quick And Easy Cooking Recipes! We offer a large selection of quick and easy cooking recipes for our users. Our main users base consists
-  of small business users, and family orientated users. However this site is avaliable to all users form large to small business users, and also to your average
-  joe who would like to find a quick recipe idea for friends and family memebers.
-  <br/>
-  <li><a href="{% url 'available_categories' %}">View Our List Of Categories</a></li>
-  <br/>
+<!-- Add additional CSS in static file -->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
-  <!-- image -->
-  <div class="leftbox_div1_image"></div>
-  <a href="https://restaurantden.com/free-stock-food-photography-websites/">Free Image sourced from</a>
-  <h1>Purpose Of Site</h1>
-  <p>The purpose of this web app is to give our users a quick and easy method for finding recipies that are new and up to date. We regularly add
-  new categories and recipes to allow our users to have a large variety of recipes to work with.
-    <div class="rightbox_div2_image"></div>
-    <a href="https://all-free-download.com/free-photos/food.html">Free Image sourced from</a>
-    <a href="#">
-      <br/><br/>
-      <li><a href="{% url 'available_categories' %}">View Our List Of Categories</a></li>
+{% block content %}
+
+<h1>Home Page</h1>
+<a href="#">Welcome to our home page</a>
+<br/><br/>
+</thead>
+{% for project in projects %}
+    <div class="col-sm-2">
+        <div class="card mb-2" style="width: 44rem;">
+            <img class="card-img-top" src="{% static project.image %}">
+            <div class="card-body">
+              <a href="https://restaurantden.com/free-stock-food-photography-websites/">Free images source</a>
+              <br/><br/>
+              <p>Welcome to our home page. We hope you enjoy browsing the different categories and associated recipes please use the navigation at <thead>
+                top and bottom of the site to find what you are looking for. The images below are from our Projects/Gallery page to visit our Gallery
+                please click the following link <a href="{% url 'project_index' %}">Gallery</a>
+                <br/>And to vist our selction of categories ranging from breakast to dessert
+                please click the following link to view our list of categories <a href="{% url 'available_categories' %}">Categories List</a>
+              </p>
+            </div>
+        </div>
+        <br/><br/>
+
+    </div>
+{% endfor %}
 
 {% endblock %}

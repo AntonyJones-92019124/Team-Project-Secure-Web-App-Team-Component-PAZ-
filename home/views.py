@@ -20,15 +20,13 @@ class Register(generic.CreateView):
     success_url = reverse_lazy('login')
     template_name = 'register.html'
 
+#Project functions
 def home(request):
-    """View function for home page of site."""
-
-    # Render the HTML template index.html with the data in the context variable.
-    return render(
-        request,
-        'home.html',
-        context={},
-    )
+    projects = Project.objects.all()
+    context = {
+        'projects': projects
+    }
+    return render(request, 'home.html', context)
 
 def our_categories(request):
     """View function for categories page of site."""

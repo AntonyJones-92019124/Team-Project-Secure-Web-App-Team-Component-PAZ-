@@ -1387,7 +1387,7 @@ img.header-image {
 	}
 }
 /* New rules if the window width is smaller than 1000px */
-@media screen and (max-width: 820px)
+@media screen and (max-width: 838px)
 {
 	.business-template #masthead {
 		background-color: #f3dca5;
