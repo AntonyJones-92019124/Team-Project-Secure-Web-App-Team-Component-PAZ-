@@ -1,0 +1,66 @@
+/*
+IMPORTANT "See style_downloads.css for the main css layouts everything else found in this css layout"
+Theme Name: PAZ
+Author: (PAZ) Peter, Antony, Zaine
+Description: See style css layouts for Quick And EAsy Recipes (PAZ)
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+1.0 body page div boxes
+2.0 admin navigation header
+3.0 footer navigation
+*/
+
+/*--------------------------------------------------------------
+>>> 1.0 body page div boxes
+----------------------------------------------------------------
+*/
+
+.leftbox_div1_image {
+	width: 702px;
+	height: 395px;
+	background-image: url('images/free_to_use_image2.jpg');
+	margin-bottom: 20px;
+}
+.rightbox_div2_image {
+	width: 700px;
+	height: 375px;
+	background-image: url('images/Cereal_Rasberry.jpg');
+	margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+>>> 2.0 Admin navigation header
+----------------------------------------------------------------
+*/
+
+.admin_nav_header {
+	margin: 0 auto;
+	float: left;
+	font-size: 14px;
+}
+.admin_nav_header a:hover {
+	color: #80abc8;
+}
+
+/*--------------------------------------------------------------
+>>> 3.0 footer navigation
+----------------------------------------------------------------
+*/
+.footer_nav {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 14px;
+}
+/* New rules if the window width is smaller than 1300px */
+@media screen and (max-width: 1000px)
+{
+.footer_nav {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 14px;
+}
+}
