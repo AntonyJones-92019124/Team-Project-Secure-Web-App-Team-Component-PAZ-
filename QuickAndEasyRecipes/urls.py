@@ -47,13 +47,13 @@ urlpatterns += [
     path('home/', include('home.urls')),
 ]
 
+#Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
+
 urlpatterns += [
     path('', RedirectView.as_view(url='/home/')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-#Add Django site authentication urls (for login, logout, password management)
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]
