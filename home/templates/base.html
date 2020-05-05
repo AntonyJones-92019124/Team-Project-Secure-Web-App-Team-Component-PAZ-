@@ -48,8 +48,8 @@
                           <a href="{% url 'available_categories' %}">Categories List</a>&nbsp;
                           <a href="{% url 'project_index' %}">Projects/Gallery</a>&nbsp;
                           <a href="{% url 'register' %}">Register</a>&nbsp;
-                          <a href="{% url 'logout'%}?next={{request.path}}">Logout</a>&nbsp;
-                          <a href="{% url 'login'%}?next={{request.path}}">Login</a>&nbsp;
+                          <a href="{% url 'logout'%}">Logout</a>&nbsp;
+                          <a href="{% url 'login'%}">Login</a>&nbsp;
                           <br/>
                           <!-- Only logged in Administrators section. -->
                           Only logged in (Admin members) can access this information:
