@@ -137,16 +137,15 @@
            </li>
            <li class="nav-item">
              <a class="nav-link" href="{% url 'project_index' %}">Gallery</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="{% url 'categories' %}">Add a Category</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="{% url 'view_categories' %}">Delete a Category</a>
-           </li>
-           <li class="nav-item">
-             <a cla
-
+             {% if user.is_staff %}
+             <li class="nav-item">
+               <a class="nav-link" href="{% url 'categories' %}">Add a Category</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="{% url 'view_categories' %}">Delete a Category</a>
+             </li>
+             {% else %}
+             {% endif %}
            <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                Users
