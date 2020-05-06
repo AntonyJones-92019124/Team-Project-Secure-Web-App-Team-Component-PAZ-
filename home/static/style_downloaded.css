@@ -1274,9 +1274,8 @@ body.wide {
 }
 .header {
 	background-color: #eae4d6;
-	height: 310px;
+	height: 270px;
 	width: 100%;
-	margin-bottom: 20px;
 }
 #header-left-section {
 	float: right;
@@ -1285,13 +1284,13 @@ body.wide {
 #header-logo-image {
 	float: left;
 	padding: 0px 20px 0px 0;
-	max-width: 100%;
+	max-width: auto;
 }
 #header-logo-image img {
 	margin-bottom: 0px;
 	max-height: 360px;
-	height: 310px;
-	width: 310px;
+	height: 270px;
+	width: 270px;
 }
 #header-text {
 	float: left;
@@ -1397,7 +1396,7 @@ img.header-image {
 	}
 	.header {
 		background-color: #eae4d6;
-		height: 560px;
+		height: 430px;
 		width: 100%;
 		margin-bottom: 20px;
 	}
@@ -1843,6 +1842,7 @@ li.comment {
 .extra-info{float: right !important;}
 #colophon p {
 	font-weight: 300;
+	text-align: center;
 	color: #777;
 	line-height: 22px;
 	font-size: 15px;
