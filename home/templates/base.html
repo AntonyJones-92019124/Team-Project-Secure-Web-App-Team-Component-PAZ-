@@ -20,98 +20,40 @@
 
 <!-- header section -->
 
-  <div id="page" class="hfeed site">
-      <header>
-          <div class="header">
-              <div class="main-head-wrap inner-wrap clearfix">
-                  <div id="header-logo-image">
-                      <a href="/">
-                          <img src="{% static 'images/PAZ_logo.png' %}" alt="NZ At A Glance">
-                      </a>
-                  </div>
-                  <div id="header-text" class="">
-                      <h1 id="site-title">
-                          <a href="/" title="Security Principles" rel="home">PAZ Quick And Easy Recipes</a>
-                      </h1>
-                      <p>Welcome to Quick And Easy Recipes.</p>
-                       <!-- main pages -->
-                      <div class="admin_nav_header"><br/>
-                        {% if user.is_authenticated %}
-                        <a href="#">Welcome: {{ user.get_username }}</a>
-                        <br/>
-                        {% else %}
-                        {% endif %}
-                        <br/>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<div id="page" class="hfeed site">
+  <header>
+    <div class="header">
+      <div class="main-head-wrap inner-wrap clearfix">
+        <div id="header-logo-image">
+          <a href="/">
+        <img src="{% static 'images/PAZ_logo.png' %}" alt="NZ At A Glance">
+          </a>
+      </div>
+        <div id="header-text" class="">
+        <h1 id="site-title">
+          <a href="/" title="Security Principles" rel="home">PAZ Quick And Easy Recipes</a>
+        </h1>
+        <p>Welcome to Quick And Easy Recipes.</p>
+      <!-- main pages -->
+          <div class="admin_nav_header"><br/>
+            {% if user.is_authenticated %}
+              <a href="#">Welcome: {{ user.get_username }}</a>
+              <br/>
+            {% else %}
+            {% endif %}
+            <br/>
           </div>
-      </header>
-
-<!-- navigation sidebar section -->
-
-<div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'our_categories' %}">Our Categories</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'available_categories' %}">Categories List</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'project_index' %}">Gallery</a>
-      </li>
-      {% if user.is_staff %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'categories' %}">Add a Category</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'view_categories' %}">Delete a Category</a>
-      </li>
-      {% else %}
-      {% endif %}
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Users
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'register' %}">Register</a>
-          <a class="dropdown-item" href="{% url 'login'%}">Log In</a>
-          <a class="dropdown-item" href="{% url 'logout'%}">Logout</a>
         </div>
-      </li>
-  </div>
-  </nav>
-  <br/><br/>
-<div class="row">
-<div class="col-sm-2">
-</div>
+      </div>
+    </div>
+  </header>
 
-<div class="col-sm-10 ">
-{% block content %}{% endblock %}
-</div>
-</div>
-
-<!-- footer section -->
-<footer id="colophon">
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <!-- nav bar header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 100%;">
+    <a class="navbar-brand" href="#">Navigation</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -139,29 +81,56 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Users
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'register' %}">Register</a>
-            <a class="dropdown-item" href="{% url 'login'%}">Log In</a>
-            <a class="dropdown-item" href="{% url 'logout'%}">Logout</a>
-          </div>
-        </li>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+        <a class="dropdown-item" href="{% url 'login'%}">Log In</a>
+        <a class="dropdown-item" href="{% url 'logout'%}">Logout</a>
+      </div>
+      </li>
     </div>
-    </nav>
-    <br/><br/>
-    <div class="inner-wrap">
+  </nav>
+</div>
+<br/>
+
+<!-- navigation sidebar section -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+  </div>
+<div class="col-sm-10 ">
+{% block content %}{% endblock %}
+</div>
+</div>
+</div>
+<!-- footer section -->
+
+<footer id="colophon">
+  <div class="inner-wrap">
+
       <!-- main pages -->
+
      <div class="footer_nav"><br/>
        {% if user.is_authenticated %}
-       <a href="#">Welcome: {{ user.get_username }}</a>
-       <br/><br/>
+          <a href="#">Welcome: {{ user.get_username }}</a>
        {% else %}
        {% endif %}
+       <br/><br/>
+       <a href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>&nbsp;&nbsp;
+       <a href="{% url 'our_categories' %}">Our Categories</a>&nbsp;&nbsp;
+       <a href="{% url 'available_categories' %}">Categories List</a>&nbsp;&nbsp;
+       <a href="{% url 'project_index' %}">Gallery</a>&nbsp;&nbsp;
+       {% if user.is_staff %}
+       <a href="{% url 'categories' %}">Add a Category</a>&nbsp;&nbsp;
+       <a href="{% url 'view_categories' %}">Delete a Category</a>&nbsp;&nbsp;
+       {% else %}
+       {% endif %}
+       <a href="{% url 'register' %}">Register</a>&nbsp;&nbsp;
+       <a href="{% url 'login'%}">Log In</a>&nbsp;&nbsp;
+       <a href="{% url 'logout'%}">Logout</a>&nbsp;&nbsp;
      <br/><br/>
      Quick And Easy Recipes is a test website for the Instructors and students at whitecliff school of art and technology. This Web App was created by: (PAZ) Peter, Antony, Zaine Team Members. This is a fictitious Website for the purposes of student training any similarity to charcters, images etc is purely coincidental.
     </div>
-</div>
-</div>
-
+  </div>
 </footer>
 </div>
 
